@@ -1,23 +1,31 @@
 {
   "compilerOptions": {
-    "target": "ES6", /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+    "target": "ES6",
+    "useDefineForClassFields": true,
     "lib": [
       "DOM",
       "DOM.Iterable",
       "ESNext"
-    ], /* Specify a set of bundled library declaration files that describe the target runtime environment. */
-    "strictNullChecks": true, /* Enable strict null checks. */
-    "esModuleInterop": true, /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
-    "module": "ESNext", /* Specify what module code is generated. */
-    "moduleResolution": "Node", /* Specify how TypeScript looks up a file from a given module specifier. */
-    "jsx": "react", /* Specify what JSX code is generated. */
-    "rootDirs": [
-      "src",
-      "tests"
-    ], /* Allow multiple folders to be treated as one when resolving modules. */
-    "baseUrl": "src ", /* Specify the base directory to resolve non-relative module names. */
-    "paths": {}, /* Specify a set of entries that re-map imports to additional lookup locations. */
-    "allowJs": true, /* Allow JavaScript files to be a part of your program. Use the 'checkJS' option to get errors from these files. */
-    "resolveJsonModule": true, /* Enable importing .json files. */
-  }
+    ],
+    "esModuleInterop": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "jsx": "react",
+    "rootDir": "src",
+    "baseUrl": "src",
+    "allowJs": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
