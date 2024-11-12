@@ -4,10 +4,16 @@
     "prettier"
   ],
   "parserOptions": {
-    "project": "./tsconfig.json"
+    "project": "./tsconfig.json",
+    "parser": "@typescript-eslint/parser"
   },
+  "plugins": [
+    "prettier"
+  ],
   "rules": {
     "@typescript-eslint/consistent-type-definitions": "off",
-    "@typescript-eslint/strict-boolean-expressions": "off"
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "prettier/prettier": "error"
   }
 }
