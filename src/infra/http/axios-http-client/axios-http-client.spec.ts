@@ -6,6 +6,20 @@ import { type HttpPostParams } from '@/data/protocols/http'
 jest.mock('axios')
 const mockedAxios: jest.Mocked<Axios.AxiosStatic> = axios as jest.Mocked<typeof axios>
 
+const mockedAxiosResult = {
+  status: faker.number.int(),
+  statusText: 'OK',
+  headers: {},
+  config: {
+    url: ''
+  },
+  data: faker.helpers.objectValue({
+    key: faker.word.sample()
+  })
+}
+
+mockedAxios.post.mockResolvedValue(mockedAxiosResult)
+
 const makeSut = (): AxiosHttpClient => {
   return new AxiosHttpClient()
 }
@@ -27,5 +41,18 @@ describe('AxiosHttpClient', () => {
 
     // eslint-disable-next-line @typescript-eslint/unbound-method
     expect(mockedAxios.post).toHaveBeenCalledWith(request.url, request.body)
+  })
+  test('should return the correct status code and body', async () => {
+    const sut = makeSut()
+
+    const request = mockPostRequest()
+
+    // eslint-disable-next-line @typescript-eslint/no-confusing-void-expression
+    const httpResponse = await sut.post(request)
+
+    expect(httpResponse).toEqual({
+      statusCode: mockedAxiosResult.status,
+      body: mockedAxiosResult.data
+    })
   })
 })
