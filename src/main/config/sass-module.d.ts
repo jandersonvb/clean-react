@@ -1,4 +1,5 @@
+/* eslint-disable @typescript-eslint/consistent-indexed-object-style */
 declare module '*.scss' {
-  const content: Record<string, string>
-  export default content
+  const content: { [className: string]: string }
+  export = content
 }

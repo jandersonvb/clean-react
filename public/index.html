@@ -14,8 +14,11 @@
   </head>
   <body>
     <main id="main"></main>
-    <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
-    <script src="/public/js/bundle.js"></script>
+    <!-- Carregar React e ReactDOM antes do seu bundle -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+
+    <!-- Seu script de bundle.js -->
+    <script src="js/bundle.js"></script>
   </body>
 </html>
