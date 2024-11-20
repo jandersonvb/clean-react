@@ -22,8 +22,8 @@
     "@types/axios": "^0.9.36",
     "@types/jest": "^29.5.14",
     "@types/node": "^22.9.0",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
+    "@types/react": "^17.0.21",
+    "@types/react-dom": "^17.0.9",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^7.1.2",
@@ -43,18 +43,19 @@
     "jest-environment-jsdom": "^29.7.0",
     "lint-staged": "^15.2.10",
     "node-sass": "^9.0.0",
+    "sass": "^1.81.0",
     "sass-loader": "^16.0.3",
     "style-loader": "^4.0.0",
     "ts-jest": "^29.2.5",
     "ts-loader": "^9.5.1",
     "typescript": "5.3.x",
     "webpack": "^5.96.1",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.1.0"
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.15.2"
   },
   "dependencies": {
     "axios": "^1.7.7",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }
